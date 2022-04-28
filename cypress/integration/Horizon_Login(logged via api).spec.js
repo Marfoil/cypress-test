@@ -57,7 +57,6 @@ describe('Horizon Login second file', { scrollBehavior: false }, () => {
 	// });
 
 	it('Horizon user can log out', () => {
-		cy.visit(environmentURL);
 		cy.get('#login-form-username').type(users[0].username);
 		cy.get('#login-form-password').type(users[0].password);
 		cy.contains('Log In').click();
