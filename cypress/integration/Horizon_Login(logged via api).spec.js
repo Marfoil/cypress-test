@@ -3,9 +3,9 @@ import users from '../fixtures/users.json';
 import 'cypress-localstorage-commands';
 
 describe('Horizon Login second file', { scrollBehavior: false }, () => {
-	// beforeEach(() => {
-	// 	cy.visit('https://dev5lts.horizon.greenpowermonitor.com');
-	// });
+	beforeEach(() => {
+		cy.visit('https://dev5lts.horizon.greenpowermonitor.com');
+	});
 
 	it('Horizon can be opened', () => {
 		cy.contains('Log In');

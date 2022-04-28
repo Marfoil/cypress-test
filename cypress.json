@@ -1,6 +1,19 @@
 {
+    "chromeWebSecurity": false,
     "projectId": "cypressCourse",
     "env": {
         "EXTERNAL_API": "https://jsonplaceholder.typicode.com/"
-    }
+    },
+    "$schema": "https://on.cypress.io/cypress.schema.json",
+    "experimentalStudio": true,
+    "screenshotOnRunFailure": true,
+    "reporter": "cypress-mochawesome-reporter",
+    "reporterOptions": {
+        "reportDir": "cypress/report",
+        "charts": true,
+        "reportPageTitle": "Cypress PoC",
+        "embeddedScreenshots": true,
+        "inlineAssets": true
+    },
+    "video": false
 }
