@@ -47,7 +47,7 @@ describe('Horizon Login second file', { scrollBehavior: false }, () => {
 				});
 		});
 
-		it.only('Horizon user can log out', () => {
+		it('Horizon user can log out', () => {
 			cy.get('.tree-menu').should('be.visible');
 			cy.wait(3000);
 			cy.get('.thumb-user').click();
