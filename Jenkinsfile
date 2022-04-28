@@ -20,7 +20,7 @@ pipeline {
     environment {
         BUILD_USER = ''
     }
-    
+
     //The parameters directive provides a list of parameters that a user should provide when triggering the Pipeline.
     //The values for these user-specified parameters are made available to Pipeline steps via the params object, see
     //the Parameters, Declarative Pipeline for its specific usage.
@@ -71,7 +71,7 @@ pipeline {
                 BUILD_USER = getBuildUser()
             }
             
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'Cypress PoC', reportTitles: ''])
+            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'Cypress PoC')
             deleteDir()
         }
     }
