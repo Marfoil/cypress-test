@@ -1,0 +1,6 @@
+{
+    "projectId": "cypressCourse",
+    "env": {
+        "EXTERNAL_API": "https://jsonplaceholder.typicode.com/"
+    }
+}

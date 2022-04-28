@@ -1,0 +1,26 @@
+{
+  "name": "cypress_course",
+  "version": "1.0.0",
+  "description": "Cypress PoC",
+  "main": "index.js",
+  "author": "JMarfil",
+  "scripts": {
+    "test": "cypress open"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "cypress": "^9.6.0",
+    "cypress-localstorage-commands": "^1.7.0",
+    "cypress-xpath": "^1.6.2",
+    "eslint-plugin-cypress": "^2.12.1"
+  },
+  "eslintConfig": {
+    "env": {
+      "cypress/globals": true
+    },
+    "plugins": [
+      "cypress"
+    ]
+  }
+}
