@@ -54,14 +54,13 @@ pipeline {
                 bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
             }
         }
-        
-        stage('Deploy'){
+
+        stage('Publish HTML') {
             steps {
-                echo "Deploying"
+                publishHTML([allowMissing: false, alwaysLinkToLastBuild: true, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'Cypress PoC'])
             }
         }
     }
-
     post {
         always {
             //The script step takes a block of Scripted Pipeline and executes that in the Declarative Pipeline. 
@@ -71,7 +70,6 @@ pipeline {
                 BUILD_USER = getBuildUser()
             }
             
-            publishHTML([allowMissing: false, alwaysLinkToLastBuild: false, keepAll: true, reportDir: 'cypress/report', reportFiles: 'index.html', reportName: 'Cypress PoC'])
             deleteDir()
         }
     }
