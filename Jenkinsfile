@@ -48,18 +48,18 @@ pipeline {
             }
         }
         
-        try {
-            stage('Testing') {
+        stage('Testing') {
+            try {
                 steps {
                     bat "npm i"
                     bat "npx cypress run --browser ${BROWSER} --spec ${SPEC}"
                 }
-            }
             
-        }catch (Exception e) {
-            build_ok = false
-            echo e.toString()
+            }catch (Exception e) {
+                build_ok = false
+                echo e.toString()
 
+            }
         }
         stage('Testing') {
             steps {
