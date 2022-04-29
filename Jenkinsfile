@@ -53,7 +53,7 @@ pipeline {
                 script{
                     try {
                         bat "npm i"
-                        bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --parallel --record --key test"
+                        bat "npx cypress run --browser ${BROWSER} --spec ${SPEC} --parallel --record --key 0da9d984-b101-4c90-964e-f06072a2a472"
                     }catch (Exception e) {
                         build_ok = false
                         echo e.toString()

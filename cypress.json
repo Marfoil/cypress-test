@@ -1,6 +1,6 @@
 {
     "chromeWebSecurity": false,
-    "projectId": "cypressCourse",
+    "projectId": "k72bu1",
     "env": {
         "EXTERNAL_API": "https://jsonplaceholder.typicode.com/"
     },
