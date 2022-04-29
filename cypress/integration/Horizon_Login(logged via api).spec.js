@@ -14,7 +14,7 @@ describe('Horizon Login second file', { scrollBehavior: false }, () => {
 	it('Horizon wrong user login', () => {
 		cy.get('#login-form-username').type(users[1].username);
 		cy.get('#login-form-password').type(users[1].password);
-		cy.contains('Log In').click();
+		cy.contains('Log InnnN').click();
 		cy.wait(4000);
 		cy.xpath('//p[contains(@class, "error")]').should('be.visible');
 	});
