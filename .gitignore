@@ -4,3 +4,4 @@ node_modules/*
 .html
 */report/*
 *.mp4
+browserstack.json
